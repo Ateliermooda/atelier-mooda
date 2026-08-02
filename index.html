@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Atelier Mooda</title>
 
   <style>
@@ -14,167 +13,144 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #f4efe7;
-      color: #25231f;
+      background: #f7f3ec;
+      color: #2c2925;
     }
 
     .page {
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
     }
 
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       padding: 28px 7%;
-      border-bottom: 1px solid rgba(37, 35, 31, 0.18);
+      border-bottom: 1px solid rgba(44, 41, 37, 0.12);
     }
 
     .logo {
       font-size: 22px;
-      font-weight: 700;
-      letter-spacing: 0.04em;
+      font-weight: 600;
+      letter-spacing: 0.03em;
       text-transform: lowercase;
     }
 
-    nav a {
-      margin-left: 24px;
-      color: #25231f;
-      text-decoration: none;
-      font-size: 14px;
-    }
-
     main {
-      flex: 1;
+      padding: 55px 7% 70px;
+    }
+
+    .hero {
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      align-items: center;
-      gap: 60px;
-      padding: 80px 7%;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 50px;
+      align-items: start;
     }
 
-    .intro {
-      max-width: 720px;
+    .text-block {
+      padding-top: 10px;
+      max-width: 500px;
     }
 
-    .surtitle {
-      margin-bottom: 24px;
-      font-size: 13px;
-      letter-spacing: 0.16em;
+    .kicker {
+      font-size: 12px;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
+      margin-bottom: 22px;
+      color: #6b6258;
     }
 
     h1 {
-      margin: 0 0 28px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(48px, 7vw, 100px);
+      margin: 0 0 24px 0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: clamp(34px, 4vw, 56px);
+      line-height: 1.15;
+      font-style: italic;
       font-weight: 400;
-      line-height: 0.95;
+      letter-spacing: 0.01em;
     }
 
-    .description {
-      max-width: 580px;
-      margin-bottom: 36px;
-      font-size: 19px;
+    .intro {
+      font-size: 22px;
       line-height: 1.6;
+      margin: 0 0 30px 0;
+      color: #3a342e;
     }
 
-    .button {
-      display: inline-block;
-      padding: 15px 24px;
-      background: #25231f;
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 15px;
+    .secondary {
+      font-size: 18px;
+      line-height: 1.7;
+      margin: 0;
+      color: #5a5249;
     }
 
-    .visual {
-      min-height: 460px;
-      background:
-        linear-gradient(
-          145deg,
-          #82936f 0%,
-          #82936f 38%,
-          #d7b3a1 38%,
-          #d7b3a1 67%,
-          #d9c9a6 67%,
-          #d9c9a6 100%
-        );
+    .visual img {
+      width: 100%;
+      height: auto;
+      display: block;
       border-radius: 2px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
     }
 
     footer {
-      padding: 24px 7%;
+      padding: 22px 7%;
+      border-top: 1px solid rgba(44, 41, 37, 0.12);
       font-size: 13px;
-      border-top: 1px solid rgba(37, 35, 31, 0.18);
+      color: #6b6258;
     }
 
-    @media (max-width: 800px) {
-      header {
-        align-items: flex-start;
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
       }
 
-      nav {
-        display: none;
+      .text-block {
+        max-width: 100%;
+      }
+
+      .intro {
+        font-size: 20px;
+      }
+
+      .secondary {
+        font-size: 17px;
       }
 
       main {
-        grid-template-columns: 1fr;
-        padding-top: 55px;
-      }
-
-      .visual {
-        min-height: 280px;
-      }
-
-      .description {
-        font-size: 17px;
+        padding-top: 40px;
       }
     }
   </style>
 </head>
-
 <body>
   <div class="page">
-
     <header>
       <div class="logo">atelier mooda</div>
-
-      <nav>
-        <a href="#studio">Le studio</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-      </nav>
     </header>
 
     <main>
-      <section class="intro" id="studio">
-        <div class="surtitle">Packaging · édition · identité visuelle</div>
+      <section class="hero">
+        <div class="text-block">
+          <div class="kicker">Packaging · Édition · Identité visuelle</div>
 
-        <h1>
-          Transformer une inspiration en univers graphique.
-        </h1>
+          <h1>Vos œuvres préférées transformées en collection.</h1>
 
-        <p class="description">
-          Atelier Mooda imagine des collections graphiques et des supports
-          imprimés à partir d’une matière, d’un objet, d’une ambiance ou d’un
-          souvenir.
-        </p>
+          <p class="intro">
+            L’image parle d’elle-même.
+          </p>
 
-        <a class="button" href="mailto:bonjour@ateliermooda.fr">
-          Parler de votre projet
-        </a>
+          <p class="secondary">
+            Vos enveloppes, carnets, mugs, presse-papiers, coffrets et boîtes
+            à votre image. Votre univers à portée de main.
+          </p>
+        </div>
+
+        <div class="visual">
+          <img src="terra-atelier.png" alt="Collection graphique inspirée d’un vase">
+        </div>
       </section>
-
-      <div class="visual" aria-label="Composition graphique Atelier Mooda"></div>
     </main>
 
-    <footer id="contact">
-      Atelier Mooda · Design graphique et supports imprimés
+    <footer>
+      Atelier Mooda · créations graphiques à partir de vos inspirations
     </footer>
-
   </div>
 </body>
 </html>
