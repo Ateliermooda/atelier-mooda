@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Atelier Mooda</title>
 
   <style>
@@ -41,52 +42,52 @@
       display: grid;
       grid-template-columns: 0.95fr 1.05fr;
       gap: 50px;
-      align-items: start;
+      align-items: stretch;
     }
 
     .text-block {
-      padding-top: 10px;
+      display: grid;
+      grid-template-rows: auto 1fr;
       max-width: 500px;
+      height: 100%;
+      padding-top: 10px;
     }
 
     .kicker {
       font-size: 12px;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      margin-bottom: 22px;
       color: #6b6258;
     }
 
+    .message {
+      align-self: center;
+      padding-bottom: 20px;
+    }
+
     h1 {
-      margin: 200px 15px 24px 0;
+      margin: 0 0 24px;
       font-family: Arial, Helvetica, sans-serif;
-      font-size: clamp(34px, 4vw, 36px);
+      font-size: clamp(34px, 3vw, 36px);
       line-height: 1.15;
       font-style: italic;
       font-weight: 400;
       letter-spacing: 0.01em;
     }
 
-    .intro {
-      font-size: 22px;
-      line-height: 1.6;
-      margin: 0 0 30px 0;
-      color: #3a342e;
-    }
-
     .secondary {
+      margin: 0;
       font-size: 18px;
       line-height: 1.7;
-      margin: 0;
       color: #5a5249;
     }
 
     .visual img {
+      display: block;
       width: 100%;
       height: auto;
-      display: block;
       border-radius: 2px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
     }
 
     footer {
@@ -97,56 +98,82 @@
     }
 
     @media (max-width: 900px) {
+      main {
+        padding-top: 40px;
+      }
+
       .hero {
         grid-template-columns: 1fr;
       }
 
       .text-block {
+        display: block;
         max-width: 100%;
       }
 
-      .intro {
-        font-size: 20px;
+      .kicker {
+        margin-bottom: 45px;
+      }
+
+      .message {
+        padding-bottom: 0;
+      }
+
+      h1 {
+        font-size: 34px;
       }
 
       .secondary {
+        margin-bottom: 35px;
         font-size: 17px;
-      }
-
-      main {
-        padding-top: 70px;
       }
     }
   </style>
 </head>
+
 <body>
   <div class="page">
+
     <header>
       <div class="logo">atelier mooda</div>
     </header>
 
     <main>
       <section class="hero">
+
         <div class="text-block">
-          <div class="kicker">Packaging · Édition · Identité visuelle</div>
 
-          <h1>Vos œuvres préférées transformées en collection.</h1>
+          <div class="kicker">
+            Packaging · Édition · Identité visuelle
+          </div>
 
-          <p class="secondary">
-            Vos enveloppes, carnets, mugs, presse-papiers, coffrets et boîtes
-            à votre image. Votre univers à portée de main.
-          </p>
+          <div class="message">
+            <h1>
+              Vos œuvres préférées transformées en collection.
+            </h1>
+
+            <p class="secondary">
+              Vos enveloppes, carnets, mugs, presse-papiers, coffrets et boîtes
+              à votre image. Votre univers à portée de main.
+            </p>
+          </div>
+
         </div>
 
         <div class="visual">
-          <img src="terra-atelier.png" alt="Collection graphique inspirée d’un vase">
+          <img
+            src="terra-atelier.png"
+            alt="Collection graphique inspirée d’un vase"
+          >
         </div>
+
       </section>
     </main>
 
     <footer>
       Atelier Mooda · créations graphiques à partir de vos inspirations
     </footer>
+
   </div>
 </body>
 </html>
